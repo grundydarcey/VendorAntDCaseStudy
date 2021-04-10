@@ -75,3 +75,24 @@ div {
 .logoname {
   text-align: center;
 }
+
+#bottominfo {
+  grid-row-start: 6;
+}
+
+ #featureinfo {
+  grid-row-start: 7;
+}
+
+#caseinfo {
+  grid-row-start: 8;
+}
+
+.adddiv {
+  cursor: pointer;
+}
+
+.notetext {
+  margin: 30px;
+  font-size: 12px;
+}

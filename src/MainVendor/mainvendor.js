@@ -10,12 +10,13 @@ export default class MainVendors extends Component {
   static contextType = Context;
 
   render() {
+    const DBD = this.context.dropboxDeleted;
     return (
         <main className='App'> 
         <section className='wrapper'>
           <div onClick={() => this.addCriteria()} className='criteria'>Add Criteria +</div>
           <div onClick={() => this.context.addVendor()}><img src={Addition} alt='add' id='add'></img><br />Add New Vendor</div>
-          <div className='noncentered'><img src={X} alt='x' id='x' onClick={() => this.context.deleteDrop()}></img><div className='logoname'><img src={Logo} alt='logo' id='icon'></img><br />Dropbox</div></div>
+          <div className='noncentered' style={{ visibility: DBD === true ? 'hidden': 'visible'}}><img src={X} alt='x' id='x' onClick={() => this.context.deleteDrop()}></img><div className='logoname'><img src={Logo} alt='logo' id='icon'></img><br />Dropbox</div></div>
           <div className='noncentered'><img src={X} alt='x' id='x' onClick={() => this.context.deleteGoogle()}></img><div className='logoname'><img src={Logo} alt='logo' id='icon'></img><br />Google Drive</div></div>
           <div className='noncentered'><img src={X} alt='x' id='x' onClick={() => this.context.deleteSales()}></img><div className='logoname'><img src={Logo} alt='logo' id='icon'></img><br />SalesForce</div></div>
           <div className='leftalign'>Overall Score</div>
